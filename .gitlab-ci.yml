@@ -1,0 +1,26 @@
+###################################################################################################
+# This CI file should give you the bare minimum to have your project be compliant with Psycle CI standards.
+# For more information about how to configure the jobs please see the README below URL:
+# https://gitlab.psycle.com/psycle-internal/gitlab-ci-templates
+#
+# This will contain further links to documentation for information such as instructions on using custom images and more.
+###################################################################################################
+
+# Define the stages of the pipeline
+# With stages, order matters, whatever order the stages are in are the order they're executed.
+# So if for example Licenses fails, Vulnerabilities and Code Quality won't be executed.
+stages:
+  - SAST
+  - Licenses
+  - Vulnerabilities
+  - Code Quality
+
+include:
+  - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/code-quality@$CI_V2_LATEST_RELEASE
+    inputs:
+      php_version: '8.4'
+      node_version: '22'
+      python_version: '3.13'
+  - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/licenses@$CI_V2_LATEST_RELEASE
+  - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/vulnerabilities@$CI_V2_LATEST_RELEASE
+  - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/sast@$CI_V2_LATEST_RELEASE

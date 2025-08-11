@@ -1,0 +1,75 @@
+# See https://git-scm.com/docs/gitignore for more about ignoring files.
+
+# Temp files
+*.tmp
+.sass-cache
+/coverage/*
+/stats/*
+
+# Secrets
+# Any client secret files (such as `service-cloud-account.json` or `cloud-service-creds.json` etc) should also be added to this list as needed.
+.env
+docker-compose.override.yml
+
+# Python virtualenv (name is specified when creating the env)
+/virtualenv
+/venv
+
+# Package managers
+node_modules/
+vendor/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs and editors
+/.idea
+.project
+.pydevproject
+.classpath
+.c9/
+*.launch
+.settings/
+.vscode/*
+
+# Compiled files
+*.pyc
+*.phar
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Misc
+connect.lock
+/typings
+*.psd
+*.exe
+*.dll
+*.lib
+*.bin
+*.com
+*.class
+*.o
+*.so
+
+# Logs/SQL
+*.log
+*.sql
+*.sqlite
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
