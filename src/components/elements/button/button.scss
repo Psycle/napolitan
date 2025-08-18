@@ -1,0 +1,17 @@
+.button {
+    cursor: pointer;
+    background-color: #fff;
+    color: #111;
+    border: none;
+    border-radius: 999px;
+    padding: 6px 12px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: #eee;
+    }
+}
+
+.button-wrap-false {
+    white-space: nowrap;
+}
