@@ -10,10 +10,13 @@
 # With stages, order matters, whatever order the stages are in are the order they're executed.
 # So if for example Licenses fails, Vulnerabilities and Code Quality won't be executed.
 stages:
+  - Images
   - SAST
   - Licenses
   - Vulnerabilities
   - Code Quality
+  - WebApp
+  - app
 
 include:
   - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/code-quality@$CI_V2_LATEST_RELEASE
@@ -21,6 +24,47 @@ include:
       php_version: '8.4'
       node_version: '22'
       python_version: '3.13'
+      javascript_disable: true
   - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/licenses@$CI_V2_LATEST_RELEASE
   - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/vulnerabilities@$CI_V2_LATEST_RELEASE
   - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci-templates/sast@$CI_V2_LATEST_RELEASE
+  - component: $CI_SERVER_FQDN/psycle-internal/gitlab-ci/components/docker/aws-build-image@0.2.0
+    inputs:
+      # access key id/secret to allow upload to aws
+      aws_build_access_key_id: $APP_IMAGE_AWS_ACCESS_KEY_ID
+      aws_build_access_key_secret: $APP_IMAGE_AWS_ACCESS_KEY_SECRET
+      # dockerfile
+      image_dockerfile: ci/Ci.Dockerfile
+      # target from multistage docker builds
+      image_target: app
+      # image name, will need to be unique within the repository path
+      image_name: app
+      # build
+      stage_build: Images # the stages stage for the build/test step
+      # command ran within the new image, acting as a test to confirm the build is good
+      image_test_command: echo 'todo'
+      # upload
+      stage_upload: Images # the stages stage for the upload step
+      # upload destination
+      image_repository_name: client-repos/google-jigsaw/napolitan-website/code-quality/linter
+      # the tag and triggers and upload if truthy
+      image_upload: $APP_IMAGE_TAG
+      # tag
+      image_tags:
+        - latest
+        - $APP_IMAGE_TAG
+    rules:
+      - if: $CI_PIPELINE_SOURCE == 'web' && $APP_IMAGE_TAG != 'false'
+
+"React Code Quality":
+  stage: 'WebApp'
+  image: ${CI_IMAGE_PREFIX}/client-repos/google-jigsaw/napolitan-website/code-quality/linter:2025-08-15
+  # needs: []
+  # rules:
+  #   - if: $CI_MERGE_REQUEST_ID
+  #     when: always
+  #   - when: never
+  before_script:
+    - ln -s /srv/node_modules ./
+  script:
+    - yarn lint

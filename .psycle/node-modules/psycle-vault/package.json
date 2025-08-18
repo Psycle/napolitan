@@ -1,0 +1,39 @@
+{
+    "name": "psycle-vault",
+    "description": "Utility for accessing secrets from Psycle Vault",
+    "version": "2.0.1",
+    "license": "UNLICENSED",
+    "repository": {
+      "type": "git",
+      "url": "https://gitlab.psycle.com/psycle/node-modules/dev-ops/psycle-vault.git"
+    },
+    "private": true,
+    "contributors": [
+      "David Blakemore <david.blakemore@psycle.com>",
+      "James Partington <james.partington@psycle.com>",
+      "Stuart Messenger <stuart.messenger@psycle.com>"
+    ],
+    "scripts": {
+    },
+    "dependencies": {
+      "colors": "^1.3.2",
+      "command-line-args": "^5.0.2",
+      "command-line-usage": "^6.1.0",
+      "prompt": "^1.0.0",
+      "request": "2.88.2",
+      "request-promise-native": "1.0.8",
+      "open": "^7.0.3"
+    },
+    "devDependencies": {
+    },
+    "engines": {
+      "node": ">= 8.0.0"
+    },
+    "bin": {
+      "psycle-vault": "bin/psycle-vault.js"
+    },
+    "keywords": [
+      "vault",
+      "secrets"
+    ]
+  }
