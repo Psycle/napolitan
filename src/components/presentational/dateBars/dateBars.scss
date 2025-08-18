@@ -1,0 +1,55 @@
+.date-bars {
+    height: 100%;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.date-bars-bar {
+    display: flex;
+    flex-direction: column;
+    width: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.date-bars-bar-top {
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    padding: 14px 0;
+    text-transform: uppercase;
+}
+
+.date-bars-bar-mid {
+    flex-grow: 1;
+}
+
+.date-bars-bar-mid-inner {
+    height: 100%;
+    background: #fffa;
+    margin-left: 5px;
+    width: 5px;
+    border-radius: 999px;
+}
+
+.date-bars-bar-bottom {
+    writing-mode: vertical-rl;
+    padding: 14px 0;
+    transform: rotate(-180deg);
+    text-transform: uppercase;
+}
+
+.date-bars-main {
+    flex-grow: 1;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.date-bars-bar-2 {
+    .date-bars-bar-top,
+    .date-bars-bar-bottom {
+        transform: rotate(0);
+    }
+}

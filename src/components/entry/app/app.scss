@@ -1,0 +1,27 @@
+// #######################################################
+// Cascading custom reset
+// #######################################################
+
+html, body, #root, .main-layout {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+	background: #032a53;
+	color: #fff;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+a {
+	color: inherit;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+em, i {
+	font-style: italic;
+}
