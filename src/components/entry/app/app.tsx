@@ -4,6 +4,13 @@ import { MainLayout } from "../../layouts/mainLayout/mainLayout";
 import './appReset.scss';
 import './app.scss';
 
+const basename = (() => {
+  if (window.location.href.includes('localhost')) return undefined;
+  let out = window.location.pathname;
+  if (out.endsWith('/')) out = out.slice(0, -1);
+  return out;
+})();
+
 function AppRoutes() {
   return (
     <Routes>
@@ -16,7 +23,7 @@ function AppRoutes() {
 
 export function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <AppRoutes />
     </BrowserRouter>
   )
