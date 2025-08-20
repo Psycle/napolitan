@@ -73,3 +73,6 @@ connect.lock
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Added
+/dist/
