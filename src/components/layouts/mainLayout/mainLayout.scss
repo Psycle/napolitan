@@ -1,3 +1,5 @@
+@use '../../../assets/styles/mixins/fonts.scss' as fonts;
+
 .main-layout {
     display: flex;
     flex-direction: column;
@@ -60,6 +62,7 @@
 }
 
 .main-layout-footer-heading {
-    font-weight: bold;
     font-size: 1rem;
+    
+    @include fonts.bold;
 }

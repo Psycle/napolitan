@@ -1,0 +1,26 @@
+@use '../../../assets/styles/mixins/fonts.scss' as fonts;
+
+.body-text {
+	h1 {
+		@include fonts.bold;
+	}
+	
+	strong, b {
+		@include fonts.bold;
+	}
+	
+	em, i {
+		@include fonts.bold;
+	}
+	
+	strong em,
+	strong i,
+	b em,
+	b i,
+	em strong,
+	em b,
+	i strong,
+	i b {
+		@include fonts.bold-italic;
+	}
+}

@@ -1,6 +1,4 @@
-// #######################################################
-// Cascading custom reset
-// #######################################################
+@use '../../../assets/styles/mixins/fonts.scss' as fonts;
 
 html, body, #root, .main-layout {
     margin: 0;
@@ -12,16 +10,10 @@ body {
 	color: #fff;
 	font-size: 1rem;
 	line-height: 1.5rem;
+	
+	@include fonts.body;
 }
 
 a {
 	color: inherit;
-}
-
-strong, b {
-	font-weight: bold;
-}
-
-em, i {
-	font-style: italic;
 }

@@ -1,0 +1,153 @@
+// ############################################################################
+// Font faces
+// ############################################################################
+
+@mixin bold-heading($size: '') {
+    font-weight: normal;
+    font-family: grotesk-bold-heading, sans-serif;
+    
+    @if $size == 'sm' {
+        font-size: .7rem;
+        line-height: 1rem;
+    }
+
+    @if $size == 'md' {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    
+    @if $size == 'lg' {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+    
+    @if $size == 'xl' {
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+}
+
+@mixin body($size: '') {
+    font-weight: normal;
+    font-family: grotesk-body, sans-serif;
+    
+    @if $size == 'sm' {
+        font-size: .7rem;
+        line-height: 1rem;
+    }
+    
+    @if $size == 'md' {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    
+    @if $size == 'lg' {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+    
+    @if $size == 'xl' {
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+}
+
+@mixin medium($size: '') {
+    font-weight: normal;
+    font-family: grotesk-medium, sans-serif;
+    
+    @if $size == 'sm' {
+        font-size: .7rem;
+        line-height: 1rem;
+    }
+    
+    @if $size == 'md' {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    
+    @if $size == 'lg' {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+    
+    @if $size == 'xl' {
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+}
+
+@mixin bold($size: '') {
+    font-weight: normal;
+    font-family: grotesk-bold, sans-serif;
+    
+    @if $size == 'sm' {
+        font-size: .7rem;
+        line-height: 1rem;
+    }
+    
+    @if $size == 'md' {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    
+    @if $size == 'lg' {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+    
+    @if $size == 'xl' {
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+}
+
+@mixin italic($size: '') {
+    font-weight: normal;
+    font-family: grotesk-italic, sans-serif;
+    
+    @if $size == 'sm' {
+        font-size: .7rem;
+        line-height: 1rem;
+    }
+    
+    @if $size == 'md' {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    
+    @if $size == 'lg' {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+    
+    @if $size == 'xl' {
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+}
+
+@mixin bold-italic($size: '') {
+    font-weight: normal;
+    font-family: grotesk-bold-italic, sans-serif;
+    
+    @if $size == 'sm' {
+        font-size: .7rem;
+        line-height: 1rem;
+    }
+    
+    @if $size == 'md' {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    
+    @if $size == 'lg' {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+    
+    @if $size == 'xl' {
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+}
