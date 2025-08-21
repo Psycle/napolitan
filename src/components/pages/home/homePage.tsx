@@ -29,6 +29,14 @@ export function HomePage() {
                         </div>
                     </div>
                 </div>
+                <div className="home-page-introduction-section">
+                    <div className="home-page-introduction-section-inner">
+                        <h1 className="home-page-about-heading">TK About Section</h1>
+                        <BodyText>
+                            <p><strong>TK copy of</strong> the founding of the United States of America, the Napolitan Institute will host a conversation with Americans from across the nation to reflect on the legacy of our founding, the challenges of the present, and the opportunities of the future.</p>
+                        </BodyText>
+                    </div>
+                </div>
             </div>
         </div>
     )
