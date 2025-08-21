@@ -5,10 +5,13 @@ type BodyTextProps = React.HTMLAttributes<HTMLDivElement>;
 
 export function BodyText(props: BodyTextProps) {
 
-    const [children, ...rest] = useMemo(() => {
+    const [children, rest] = useMemo(() => {
         const { children, className, ...rest } = props;
-        const fullClassName = `body-text ${className || ''}`;
-        return [children, { ...rest, className: fullClassName }];
+        const fullClassName = ['body-text', `${className || ''}`].filter(Boolean).join('');
+        return [children, {
+            ...rest,
+            className: fullClassName
+        }];
     }, [props]);
 
     return (
