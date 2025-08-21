@@ -14,7 +14,7 @@ export function HomePage() {
                             <h1 className="home-page-hero-heading">America in conversation</h1>
                         </div>
                     </DateBars>
-                    <video className="home-page-hero-image" autoPlay muted>
+                    <video className="home-page-hero-image" autoPlay muted loop>
                         <source src={headerVideo} type="video/mp4" />
                     </video>
                 </div>
