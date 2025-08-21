@@ -1,14 +1,11 @@
 import { Outlet } from "react-router";
-import { DateBars } from "../../presentational/dateBars/dateBars";
 import './mainLayout.scss';
 
 export function MainLayout() {
     return (
         <div className="main-layout">
             <main className="main-layout-main">
-                <DateBars>
-                    <Outlet />
-                </DateBars>
+                <Outlet />
             </main>
             <footer className="main-layout-footer">
                 <div className="main-layout-footer-inner">                        

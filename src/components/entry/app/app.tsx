@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import { HomePage } from "../../pages/home/homePage";
 import { MainLayout } from "../../layouts/mainLayout/mainLayout";
+import './fontFace.scss';
 import './appReset.scss';
 import './app.scss';
 
