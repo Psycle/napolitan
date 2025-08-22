@@ -111,5 +111,24 @@
 .home-page-about-heading {
     text-transform: uppercase;
 
-    @include fonts.bold-heading('lg');
+    @include fonts.bold-heading(xl);
+}
+
+.home-page-faq-section {
+    background: #fff;
+    color: #000;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.home-page-faq-section-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home-page-faq-heading {
+    @include fonts.bold-heading(xl);
 }
