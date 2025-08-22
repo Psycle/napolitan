@@ -3,7 +3,7 @@
     background-color: #fff;
     color: #111;
     border-radius: 999px;
-    padding: 6px 12px;
+    padding: 10px 20px;
     text-transform: uppercase;
     border: 1px solid #ccc;
 
@@ -14,4 +14,14 @@
 
 .button-wrap-false {
     white-space: nowrap;
+}
+
+.button-variant-primary {
+    background: #2E8EFF;
+    color: #fff;
+    border: none;
+
+    &:hover {
+        background: #277bdc;
+    }
 }

@@ -7,11 +7,13 @@ function getButtonClassName(props: ButtonProps | ButtonLinkProps): string {
         props.className,
         'button',
         `button-wrap-${props.wrap || false}`,
+        `button-variant-${props.variant || 'default'}`,
     ].filter(Boolean).join(' ');
 }
 
 type CustomButtonProps = {
     wrap?: boolean | undefined;
+    variant?: 'default' | 'primary' | undefined;
 };
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & CustomButtonProps;
