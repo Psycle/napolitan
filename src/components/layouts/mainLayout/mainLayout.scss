@@ -1,3 +1,5 @@
+@use '../../../assets/styles/mixins/fonts.scss' as fonts;
+
 .main-layout {
     display: flex;
     flex-direction: column;
@@ -13,7 +15,7 @@
 }
 
 .main-layout-footer {
-    background: #032a53;
+    background: #d70c02;
     color: #fff;
     border-top: 5px solid #fff;
     padding-top: 40px;
@@ -27,6 +29,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    padding: 0 50px;
 }
 
 .main-layout-footer-section p {
@@ -36,14 +39,13 @@
 .main-layout-footer-section-socials {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 6px;
     margin-bottom: 15px;
 }
 
 .main-layout-footer-section-social {
-    width: 20px;
-    height: 20px;
-    background: #fff;
+    width: 22px;
+    height: 22px;
     border-radius: 5px;
 }
 
@@ -54,12 +56,34 @@
 }
 
 .main-layout-footer-logo {
-    background: #fff;
     width: 150px;
     height: 30px;
 }
 
+.main-layout-footer-logo-jigsaw {
+    width: 110px;
+    height: 30px; 
+}
+
+
 .main-layout-footer-heading {
-    font-weight: bold;
     font-size: 1rem;
+    
+    @include fonts.bold;
+}
+
+.main-layout-footer-wtp-heading {
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin-bottom: -5px;
+    
+    @include fonts.bold;
+}
+
+@media (width < 700px) {
+    .main-layout-footer-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
 }
