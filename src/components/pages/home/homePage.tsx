@@ -1,9 +1,9 @@
 import { BodyText } from '../../elements/bodyText/bodyText';
 import { DateBars } from '../../presentational/dateBars/dateBars';
 import headerVideo from '../../../assets/videos/header.mp4';
-import './homePage.scss';
 import { Accordion, AccordionBody, AccordionHeading, AccordionItem } from '../../elements/accordion/accordion';
 import { Button } from '../../elements/button/button';
+import './homePage.scss';
 
 export function HomePage() {
     return (
@@ -12,8 +12,12 @@ export function HomePage() {
                 <div className="home-page-content-top">
                     <DateBars>
                         <div className="home-page-content-top-content">
-                            <img className="home-page-logo" src="src/assets/images/we-the-people.svg" />
-                            <h1 className="home-page-hero-heading">America in conversation</h1>
+                            <img
+                                className="home-page-logo"
+                                src="src/assets/images/we-the-people.svg"
+                                alt="We the People 250th anniversary. 1776 - 2026. America in conversation."
+                            />
+                            <h1 className="home-page-hero-heading">America in<br />conversation</h1>
                         </div>
                     </DateBars>
                     <video className="home-page-hero-image" autoPlay muted loop>
@@ -79,7 +83,7 @@ export function HomePage() {
                 <div className="home-page-sign-up-section">
                     <div className="home-page-sign-up-section-inner">
                         <h1 className="home-page-sign-up-heading">Sign Up for updates</h1>
-                        <Button>Sign up</Button>
+                        <Button variant="primary">Sign up</Button>
                     </div>
                 </div>
             </div>

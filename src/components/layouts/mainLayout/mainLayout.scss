@@ -15,7 +15,7 @@
 }
 
 .main-layout-footer {
-    background: #032a53;
+    background: #d70c02;
     color: #fff;
     border-top: 5px solid #fff;
     padding-top: 40px;
@@ -29,6 +29,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    padding: 0 50px;
 }
 
 .main-layout-footer-section p {
@@ -77,4 +78,12 @@
     margin-bottom: -5px;
     
     @include fonts.bold;
+}
+
+@media (width < 700px) {
+    .main-layout-footer-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
 }

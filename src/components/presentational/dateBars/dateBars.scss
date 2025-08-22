@@ -5,6 +5,7 @@
     flex-direction: row;
     flex-grow: 1;
     padding: 0 10px;
+    overflow: hidden;
 }
 
 .date-bars-bar {
@@ -51,5 +52,11 @@
     .date-bars-bar-top,
     .date-bars-bar-bottom {
         transform: rotate(0);
+    }
+}
+
+@media (width < 360px) {
+    .date-bars-bar {
+        display: none;
     }
 }

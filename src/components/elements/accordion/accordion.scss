@@ -19,13 +19,18 @@
 }
 
 .accordion-heading {
-    height: 50px;
+    min-height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
     @include fonts.bold-heading(lg);
+}
+
+.accordion-heading-heading {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .accordion-heading-glyph {
