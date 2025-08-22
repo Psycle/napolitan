@@ -3,6 +3,8 @@ import { DateBars } from '../../presentational/dateBars/dateBars';
 import headerVideo from '../../../assets/videos/header.mp4';
 import { Accordion, AccordionBody, AccordionHeading, AccordionItem } from '../../elements/accordion/accordion';
 import { Button } from '../../elements/button/button';
+import logoImage from '../../../assets/images/we-the-people.svg';
+import equalityImage from '../../../assets/images/on-freedom-and-equality.svg';
 import './homePage.scss';
 
 export function HomePage() {
@@ -14,7 +16,7 @@ export function HomePage() {
                         <div className="home-page-content-top-content">
                             <img
                                 className="home-page-logo"
-                                src="src/assets/images/we-the-people.svg"
+                                src={logoImage}
                                 alt="We the People 250th anniversary. 1776 - 2026. America in conversation."
                             />
                             <h1 className="home-page-hero-heading">America in<br />conversation</h1>
@@ -27,7 +29,7 @@ export function HomePage() {
                 <div className="home-page-content-bottom">
                     <div className="home-page-main-text">
                         {/* <h2 className="home-page-hero-subheading">On Freedom & Equality</h2> */}
-                        <img className="home-page-hero-subheading-img" src="src/assets/images/on-freedom-and-equality.svg" alt="On Freedom and Equality" />
+                        <img className="home-page-hero-subheading-img" src={equalityImage} alt="On Freedom and Equality" />
                         <div className="home-page-main-inner">
                             <BodyText>
                                 <p><strong>In honor of the 250th anniversary</strong> of the founding of the United States of America, the Napolitan Institute will host a conversation with Americans from across the nation to reflect on the legacy of our founding, the challenges of the present, and the opportunities still ahead in our future.</p>
