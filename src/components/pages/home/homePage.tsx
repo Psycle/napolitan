@@ -3,6 +3,7 @@ import { DateBars } from '../../presentational/dateBars/dateBars';
 import headerVideo from '../../../assets/videos/header.mp4';
 import './homePage.scss';
 import { Accordion, AccordionBody, AccordionHeading, AccordionItem } from '../../elements/accordion/accordion';
+import { Button } from '../../elements/button/button';
 
 export function HomePage() {
     return (
@@ -73,6 +74,12 @@ export function HomePage() {
                                 </AccordionBody>
                             </AccordionItem>
                         </Accordion>
+                    </div>
+                </div>
+                <div className="home-page-sign-up-section">
+                    <div className="home-page-sign-up-section-inner">
+                        <h1 className="home-page-sign-up-heading">Sign Up for updates</h1>
+                        <Button>Sign up</Button>
                     </div>
                 </div>
             </div>
