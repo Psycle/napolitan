@@ -2,6 +2,7 @@ import { BodyText } from '../../elements/bodyText/bodyText';
 import { DateBars } from '../../presentational/dateBars/dateBars';
 import headerVideo from '../../../assets/videos/header.mp4';
 import './homePage.scss';
+import { Accordion, AccordionBody, AccordionHeading, AccordionItem } from '../../elements/accordion/accordion';
 
 export function HomePage() {
     return (
@@ -35,6 +36,43 @@ export function HomePage() {
                         <BodyText>
                             <p><strong>TK copy of</strong> the founding of the United States of America, the Napolitan Institute will host a conversation with Americans from across the nation to reflect on the legacy of our founding, the challenges of the present, and the opportunities of the future.</p>
                         </BodyText>
+                    </div>
+                </div>
+                <div className="home-page-faq-section">
+                    <div className="home-page-faq-section-inner">
+                        <h1 className="home-page-faq-heading">Frequently asked questions</h1>
+                        <Accordion>
+                            <AccordionItem>
+                                <AccordionHeading>Will this be a question in the TK?</AccordionHeading>
+                                <AccordionBody>
+                                    <p><strong>This is TK text</strong> of the founding of the United States of America, the Napolitan Institute will host a conversation with Americans from across the nation to reflect on the legacy of our founding, the challenges of the present, and the opportunities still ahead in our future.</p>
+                                </AccordionBody>
+                            </AccordionItem>
+                            <AccordionItem>
+                                <AccordionHeading>Will this be a question in the TK?</AccordionHeading>
+                                <AccordionBody>
+                                    <p><strong>This is TK text</strong> of the founding of the United States of America, the Napolitan Institute will host a conversation with Americans from across the nation to reflect on the legacy of our founding, the challenges of the present, and the opportunities still ahead in our future.</p>
+                                </AccordionBody>
+                            </AccordionItem>
+                            <AccordionItem>
+                                <AccordionHeading>Will this be a question in the TK?</AccordionHeading>
+                                <AccordionBody>
+                                    <p><strong>This is TK text</strong> of the founding of the United States of America, the Napolitan Institute will host a conversation with Americans from across the nation to reflect on the legacy of our founding, the challenges of the present, and the opportunities still ahead in our future.</p>
+                                </AccordionBody>
+                            </AccordionItem>
+                            <AccordionItem>
+                                <AccordionHeading>Will this be a question in the TK?</AccordionHeading>
+                                <AccordionBody>
+                                    <p><strong>This is TK text</strong> of the founding of the United States of America, the Napolitan Institute will host a conversation with Americans from across the nation to reflect on the legacy of our founding, the challenges of the present, and the opportunities still ahead in our future. Future.</p>
+                                </AccordionBody>
+                            </AccordionItem>
+                            <AccordionItem>
+                                <AccordionHeading>Will this be a question in the TK?</AccordionHeading>
+                                <AccordionBody>
+                                    <p><strong>This is TK text</strong> of the founding of the United States of America, the Napolitan Institute will host a conversation with Americans from across the nation to reflect on the legacy of our founding, the challenges of the present, and the opportunities still ahead in our future.</p>
+                                </AccordionBody>
+                            </AccordionItem>
+                        </Accordion>
                     </div>
                 </div>
             </div>
